@@ -35,7 +35,7 @@ public class Player : MonoBehaviour
         verticalInput = Input.GetAxis("Vertical");
         transform.Translate(new Vector3(horizontalInput, verticalInput, 0) * Time.deltaTime * speed);
 
-        if (transform.position.y > 0)
+       if (transform.position.y > 0)
        {
         transform.position = new Vector3(transform.position.x, -0.001f, 0);
        }
@@ -66,5 +66,4 @@ public class Player : MonoBehaviour
             Instantiate(bullet, transform.position + new Vector3(0, 1, 0), Quaternion.identity);
         }
     }
-
 }
